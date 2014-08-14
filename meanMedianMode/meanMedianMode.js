@@ -8,7 +8,7 @@ var mean = function(numbers) {
 
 var median = function(numbers) {
 	var sortedNumbers = numbers.slice().sort(function(a, b) { 
-		return a - b;  // .slice() lets us sort a copy, not the original: cleaner
+		return a - b;  // .slice() lets us sort a copy, not the original: no side effects
 	});
 	if (sortedNumbers.length % 2 !== 0) {
 		// Odd number of arguments? Return the middle number...
@@ -37,6 +37,13 @@ var mode = function(numbers) {
 	}
 	return winners.length > 1 ? 'It\'s a tie between ' + winners.join(' and ') : winners[0];
 };
+
+// For testing
+// (Must be above the return statement that checks for empty input!)
+exports.mean = mean;
+exports.median = median;
+exports.mode = mode;
+
 
 // Start of execution
 
