@@ -13,7 +13,7 @@ changes!
 
 var Thing = (function() {
 	return function() {
-		var privateVar = 'secret value';
+		var privateVar = 'default secret value';
 		this.getPrivateVar = function() {
 			return privateVar;
 		};
@@ -26,11 +26,12 @@ var Thing = (function() {
 				privateVar = newVar;
 			}
 		};
+		// We can even do Object.preventExtensions(this); 
 	};
 }());
 
 var myThing = new Thing();
-console.log(myThing.getPrivateVar()); // 'secret value'
+console.log(myThing.getPrivateVar()); // 'default secret value'
 
 // console.log(privateVar); // <= throws an exception
 // console.log(myThing.privateVar); // <= 'undefined'
