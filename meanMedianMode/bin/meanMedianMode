@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var validNumbers = require('../../utilities/validNumbers');
+var meanMedianMode = require('../lib/meanMedianMode');
+var mean = meanMedianMode.mean;
+var median = meanMedianMode.median;
+var mode = meanMedianMode.mode;
+
+// Sanitize input
+if (!validNumbers()) {
+	return false;
+}
+
+// Let's do some math!
+console.log('mean: ' + mean(process.argv));
+console.log('median: ' + median(process.argv));
+console.log('mode: ' + mode(process.argv));
