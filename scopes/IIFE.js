@@ -3,12 +3,12 @@ REAL-LIFE USE CASE FOR AN IIFE
 ==============================
 
 Suppose you have an object with a sensitive property; you want to validate 
-any attempt to reset it. Well, you make that property an inner var in an IIFE,
+any attempt to reset it. Just make that property an inner var in an IIFE,
 and write your own functions to get and set it--that way, you can force the set() 
 function to validate.
 
 The inner var is inaccessible without those methods, and it persists even after
-changes!
+changes.
 */
 
 var Thing = (function() {
@@ -30,11 +30,12 @@ var Thing = (function() {
 	};
 }());
 
-var myThing = new Thing();
-console.log(myThing.getPrivateVar()); // 'default secret value'
+var checkGlobalScope = function() {
+	return privateVar; // So we can make sure privateVar doesn't exist in the global scope
+}
 
-// console.log(privateVar); // <= throws an exception
-// console.log(myThing.privateVar); // <= 'undefined'
+var privateThing = new Thing();
 
-myThing.setPrivateVar('new secret value');
-console.log(myThing.getPrivateVar()); // 'new secret value'
+// Export for testing
+exports.privateThing = privateThing;
+exports.checkGlobalScope = checkGlobalScope;
