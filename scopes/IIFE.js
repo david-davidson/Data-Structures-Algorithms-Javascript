@@ -32,7 +32,7 @@ var Thing = (function() {
 
 var checkGlobalScope = function() {
 	return privateVar; // So we can make sure privateVar doesn't exist in the global scope
-}
+};
 
 var privateThing = new Thing();
 
