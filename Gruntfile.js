@@ -4,7 +4,7 @@ module.exports = function(grunt){
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            files: ['*/*.js']
+            files: ['sorts/**/*.js', 'tests/**/*.js']
         }
     });
 grunt.registerTask('default', [
