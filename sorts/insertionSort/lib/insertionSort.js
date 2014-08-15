@@ -7,6 +7,7 @@ var exchange = require('../../../utilities/exchange');
  * the right spot among the already-sorted elements; continue.
  *
  * Performance: On^2, though it's just N - 1 if the array is already sorted!
+ * On average, about twice as fast as selection sort.
  *
  * @param {Array} numbers
  * @return {Array} the sorted array
