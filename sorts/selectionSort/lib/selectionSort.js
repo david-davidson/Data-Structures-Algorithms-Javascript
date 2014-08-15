@@ -1,12 +1,16 @@
 var exchange = require('../../../utilities/exchange');
 
 /**
- * This function accepts an array of one or more numbers and sorts them using
- * the basic selection-sort algorithm.
+ * This function accepts an array of numbers and sorts them using the basic 
+ * selection-sort algorithm.
+ * 
+ * How it works: Find the smallest item in the array; insert it as the first 
+ * entry; find the second item; insert it as the second entry, etc.
+ *
+ * Performance: On^2, sorts in place.
  *
  * @param {Array} numbers
- * @return {Array} the sorted parameters
- * Performance: On^2, sorts in place
+ * @return {Array} the sorted array
  */
 
 var selectionSort = function(numbers) {
