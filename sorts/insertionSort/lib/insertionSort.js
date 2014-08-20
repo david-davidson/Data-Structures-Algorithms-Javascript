@@ -7,7 +7,8 @@ var exchange = require('../../../utilities/exchange');
  * the right spot among the already-sorted elements; continue.
  *
  * Performance: On^2, though it's just N - 1 if the array is already sorted!
- * On average, about twice as fast as selection sort.
+ * (In that case, and with small arrays, it's fine--V8 uses it for arrays under
+ * 10, I think?) On average, about twice as fast as selection sort.
  *
  * @param {Array} numbers
  * @return {Array} the sorted array
