@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var validNumbers = require('../../../utilities/validNumbers');
+var shellSort = require('../lib/shellSort').shellSort;
+
+// Sanitize input
+if (!validNumbers()) {
+	return false;
+}
+console.log(shellSort(process.argv));
