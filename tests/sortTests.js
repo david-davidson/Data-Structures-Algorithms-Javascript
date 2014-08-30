@@ -1,10 +1,10 @@
 var expect = require('chai').expect;
-var globalRandomArray = require('../../utilities/randomArray')(10000);
+var globalRandomArray = require('../lib/utilities/randomArray')(10000);
 
-var bubbleSort = require('../../sorts/bubbleSort/lib/bubbleSort').bubbleSort;
-var selectionSort = require('../../sorts/selectionSort/lib/selectionSort').selectionSort;
-var insertionSort = require('../../sorts/insertionSort/lib/insertionSort').insertionSort;
-var shellSort = require('../../sorts/shellSort/lib/shellSort').shellSort;
+var bubbleSort = require('../lib/sorts/bubbleSort');
+var selectionSort = require('../lib/sorts/selectionSort');
+var insertionSort = require('../lib/sorts/insertionSort');
+var shellSort = require('../lib/sorts/shellSort');
 
 describe('Bubble sort', function() {
 	it('Sorts a random array from low to high', function() {

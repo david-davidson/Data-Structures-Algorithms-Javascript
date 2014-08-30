@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var validNumbers = require('../../utilities/validNumbers');
+var validNumbers = require('../lib/utilities/validNumbers');
 var meanMedianMode = require('../lib/meanMedianMode');
 var mean = meanMedianMode.mean;
 var median = meanMedianMode.median;

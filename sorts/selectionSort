@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var validNumbers = require('../lib/utilities/validNumbers');
+var selectionSort = require('../lib/sorts/selectionSort');
+
+// Sanitize input
+if (!validNumbers()) {
+	return false;
+}
+console.log(selectionSort(process.argv));

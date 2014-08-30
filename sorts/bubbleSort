@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var validNumbers = require('../lib/utilities/validNumbers');
+var bubbleSort = require('../lib/sorts/bubbleSort');
+
+// Sanitize input
+if (!validNumbers()) {
+	return false;
+}
+console.log(bubbleSort(process.argv));
