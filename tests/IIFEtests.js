@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('chai').expect;
 var IIFE = require('../scopes/IIFE').privateThing;
 var checkGlobalScope = require('../scopes/IIFE').checkGlobalScope;

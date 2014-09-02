@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('chai').expect;
 var globalRandomArray = require('../lib/utilities/randomArray')(10000);
 

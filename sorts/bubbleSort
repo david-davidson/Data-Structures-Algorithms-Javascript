@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict';
+
 var validNumbers = require('../lib/utilities/validNumbers');
 var bubbleSort = require('../lib/sorts/bubbleSort');
 

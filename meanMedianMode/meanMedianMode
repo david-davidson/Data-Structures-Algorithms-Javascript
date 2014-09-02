@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict';
+
 var validNumbers = require('../lib/utilities/validNumbers');
 var meanMedianMode = require('../lib/meanMedianMode');
 var mean = meanMedianMode.mean;

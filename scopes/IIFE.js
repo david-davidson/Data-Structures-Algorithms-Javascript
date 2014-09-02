@@ -1,10 +1,12 @@
+'use strict';
+
 /*
 REAL-LIFE USE CASE FOR AN IIFE
 ==============================
 
-Suppose you have an object with a sensitive property; you want to validate 
+Suppose you have an object with a sensitive property; you want to validate
 any attempt to reset it. Just make that property an inner var in an IIFE,
-and write your own functions to get and set it--that way, you can force the set() 
+and write your own functions to get and set it--that way, you can force the set()
 function to validate.
 
 The inner var is inaccessible without those methods, and it persists even after
@@ -26,7 +28,7 @@ var Thing = (function() {
 				privateVar = newVar;
 			}
 		};
-		// We can even do Object.preventExtensions(this); 
+		// We can even do Object.preventExtensions(this);
 	};
 }());
 

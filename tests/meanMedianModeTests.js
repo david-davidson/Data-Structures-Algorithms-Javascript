@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('chai').expect;
 var meanMedianMode = require('../lib/meanMedianMode/meanMedianMode');
 var mean = meanMedianMode.mean;
