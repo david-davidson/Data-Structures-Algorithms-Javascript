@@ -1,13 +1,41 @@
+'use strict';
+
 module.exports = function(grunt){
-    "use strict";
-    require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        jshint: {
-            files: ['sorts/**/*.js', 'tests/**/*.js']
-        }
-    });
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+
+    jshint: {
+      files: [
+        'lib/**/*.js',
+        'sorts/**/*.js',
+        'data structures/**/*.js',
+        'tests/**/*.js'
+      ],
+      options: {
+        'jshintrc': true
+      }
+    },
+
+    watch: {
+      all: {
+        files: [
+          'lib/**/*.js',
+          'sorts/**/*.js',
+          'data structures/**/*.js',
+          'tests/**/*.js'
+        ],
+        tasks: [
+          'jshint'
+        ]
+      }
+    }
+
+  });
 grunt.registerTask('default', [
     'jshint',
-    ]);
+    'watch'
+  ]);
 };
