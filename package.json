@@ -12,6 +12,7 @@
     "chai": "^1.9.1",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
     "matchdep": "*",
     "mocha": "^1.21.4"
   }
