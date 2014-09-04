@@ -1,8 +1,8 @@
-JS: The Interesting Parts
-=========================
+JS: Data Structures, Algorithms, Patterns, and More
+===================================================
 
-This is an ongoing collection of JavaScript that I find interesting or useful&mdash;not only JS-specific stuff, but also standard algorithms and data structures. Maybe you&rsquo;ll find it interesting or useful, too.
+This is an ongoing collection of JavaScript examples that I find interesting or useful: mostly algorithms and data structures (many of them ported over from Sedgewick and Wayne&rsquo;s excellent *Algorithms*, 4th ed), but also patterns that are specific to JS (e.g., scopes and closures) and/or just plain interesting (e.g., currying).
 
-Curious? Clone it and grab the dependencies with `npm install`, navigate to the directory you&rsquo;re interested in, and run the script there&mdash;e.g., `./selectionSort 3 1 2`. Or see everything at once: from the project root, run all the Mocha tests with `mocha tests/sorts` and `mocha tests/data structures`.
+Curious? Clone it, make sure you have Node and npm (plus Mocha installed globally), and grab the dependencies with `npm install`. Then run all the Mocha tests with `mocha tests/**/*.js`, or interact with the executable files by navigating into `bin/` and running them there&mdash;e.g., `./selectionSort 3 1 2`. (You might need to make the `bin/` scripts executable on your machine.)
 
-(You&rsquo;ll need Node and npm, of course, plus Mocha installed globally. Also, you might need to make the task-runner scripts executable on your machine.)
+Enjoy!
