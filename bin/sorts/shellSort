@@ -2,8 +2,8 @@
 
 'use strict';
 
-var validNumbers = require('../lib/utilities/validNumbers');
-var shellSort = require('../lib/sorts/shellSort');
+var validNumbers = require('../../lib/utilities/validNumbers');
+var shellSort = require('../../lib/sorts/shellSort');
 
 // Sanitize input
 if (!validNumbers()) {

@@ -2,8 +2,8 @@
 
 'use strict';
 
-var validNumbers = require('../lib/utilities/validNumbers');
-var bubbleSort = require('../lib/sorts/bubbleSort');
+var validNumbers = require('../../lib/utilities/validNumbers');
+var bubbleSort = require('../../lib/sorts/bubbleSort');
 
 // Sanitize input
 if (!validNumbers()) {
