@@ -10,8 +10,7 @@ module.exports = function(grunt){
     jshint: {
       files: [
         'lib/**/*.js',
-        'sorts/**/*.js',
-        'data structures/**/*.js',
+        'bin/**/*.js',
         'tests/**/*.js'
       ],
       options: {
@@ -23,8 +22,7 @@ module.exports = function(grunt){
       all: {
         files: [
           'lib/**/*.js',
-          'sorts/**/*.js',
-          'data structures/**/*.js',
+          'bin/**/*.js',
           'tests/**/*.js'
         ],
         tasks: [
