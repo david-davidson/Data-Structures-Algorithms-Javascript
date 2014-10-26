@@ -3,7 +3,7 @@
 'use strict';
 
 var validNumbers = require('../../lib/utilities/validNumbers');
-var meanMedianMode = require('../../lib/meanMedianMode/meanMedianMode');
+var meanMedianMode = require('../../lib/misc/meanMedianMode');
 var mean = meanMedianMode.mean;
 var median = meanMedianMode.median;
 var mode = meanMedianMode.mode;
