@@ -2,11 +2,10 @@
 
 'use strict';
 
-var validNumbers = require('../../lib/utilities/validNumbers');
-var selectionSort = require('../../lib/sorts/selectionSort');
+var validNumbers = require('../../lib/utilities/validNumbers'),
+	selectionSort = require('../../lib/sorts/selectionSort');
 
 // Sanitize input
-if (!validNumbers()) {
-	return false;
+if (validNumbers()) {
+	console.log(selectionSort(process.argv));
 }
-console.log(selectionSort(process.argv));

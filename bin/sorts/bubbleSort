@@ -2,11 +2,10 @@
 
 'use strict';
 
-var validNumbers = require('../../lib/utilities/validNumbers');
-var bubbleSort = require('../../lib/sorts/bubbleSort');
+var validNumbers = require('../../lib/utilities/validNumbers'),
+	bubbleSort = require('../../lib/sorts/bubbleSort');
 
 // Sanitize input
-if (!validNumbers()) {
-	return false;
+if (validNumbers()) {
+	console.log(bubbleSort(process.argv));
 }
-console.log(bubbleSort(process.argv));

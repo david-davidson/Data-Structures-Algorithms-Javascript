@@ -1,10 +1,11 @@
 'use strict';
 
-var LinkedList = require('../../lib/data structures/linkedList');
-var expect = require('chai').expect;
+var LinkedList = require('../../lib/data structures/linkedList'),
+	expect = require('chai').expect,
+	linkedList;
 
 describe('Linked list', function() {
-	var linkedList;
+	
 	before(function() {
 		linkedList = new LinkedList();
 	});
@@ -16,7 +17,7 @@ describe('Linked list', function() {
 	it('Allows me to insert new nodes', function() {
 		linkedList.insert('one', 'head');
 		linkedList.insert('two', 'one');
-		expect(linkedList.seeAll()).to.eql(['one', 'two']);
+		expect(linkedList.seeAll()).to.eql([ 'one', 'two' ]);
 	});
 
 	it('Allows me to find a node', function() {
@@ -25,6 +26,7 @@ describe('Linked list', function() {
 
 	it('Allows me to delete a note', function() {
 		linkedList.remove('two');
-		expect(linkedList.seeAll()).to.eql(['one']);
+		expect(linkedList.seeAll()).to.eql([ 'one' ]);
 	});
+	
 });

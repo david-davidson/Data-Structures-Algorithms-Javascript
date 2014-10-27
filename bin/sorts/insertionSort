@@ -2,11 +2,10 @@
 
 'use strict';
 
-var validNumbers = require('../../lib/utilities/validNumbers');
-var insertionSort = require('../../lib/sorts/insertionSort');
+var validNumbers = require('../../lib/utilities/validNumbers'),
+	insertionSort = require('../../lib/sorts/insertionSort');
 
 // Sanitize input
-if (!validNumbers()) {
-	return false;
+if (validNumbers()) {
+	console.log(insertionSort(process.argv));
 }
-console.log(insertionSort(process.argv));

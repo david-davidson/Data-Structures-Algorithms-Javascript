@@ -1,10 +1,11 @@
 'use strict';
 
-var Queue = require('../../lib/data structures/queue');
-var expect = require('chai').expect;
+var Queue = require('../../lib/data structures/queue'),
+	expect = require('chai').expect,
+	q;
 
 describe('Queue', function() {
-	var q;
+	
 	before(function() {
 		q = new Queue();
 	});
@@ -32,4 +33,5 @@ describe('Queue', function() {
 		expect(q.dequeue()).to.eql(2);
 		expect(q.isEmpty()).to.eql(true);
 	});
+	
 });

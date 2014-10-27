@@ -1,10 +1,11 @@
 'use strict';
 
-var Stack = require('../../lib/data structures/stack');
-var expect = require('chai').expect;
+var Stack = require('../../lib/data structures/stack'),
+	expect = require('chai').expect,
+	stack;
 
-describe('Stack', function() {
-	var stack;
+describe('A stack', function() {
+
 	before(function() {
 		stack = new Stack();
 	});
@@ -31,4 +32,5 @@ describe('Stack', function() {
 		expect(stack.pop()).to.eql(2);
 		expect(stack.pop()).to.eql(1);
 	});
+	
 });
