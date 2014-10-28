@@ -43,7 +43,8 @@ module.exports = function(grunt) {
           'tests/**/*.js'
         ],
         tasks: [
-          'jshint'
+          'jshint',
+          'jscs'
         ]
       }
     }
