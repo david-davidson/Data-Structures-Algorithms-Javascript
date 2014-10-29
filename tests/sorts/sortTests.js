@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect,
-	globalRandomArray = require('../../lib/utilities/randomArray')(10000),
+	globalRandomArray = require('../../lib/utilities/randomArray')(1000),
 	bubbleSort = require('../../lib/sorts/bubbleSort'),
 	selectionSort = require('../../lib/sorts/selectionSort'),
 	insertionSort = require('../../lib/sorts/insertionSort'),
