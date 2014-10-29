@@ -4,6 +4,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jscs');
+  grunt.loadNpmTasks('grunt-mocha-istanbul');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -35,6 +36,15 @@ module.exports = function(grunt) {
         }
     },
 
+    mocha_istanbul: {
+        coverage: {
+            src: 'tests/**/*'//,
+            // options: {
+            //     mask: '*.spec.js'
+            // }
+        }
+    },
+
     watch: {
       all: {
         files: [
@@ -44,7 +54,8 @@ module.exports = function(grunt) {
         ],
         tasks: [
           'jshint',
-          'jscs'
+          'jscs',
+          'mocha_istanbul:coverage'
         ]
       }
     }
@@ -53,6 +64,7 @@ module.exports = function(grunt) {
 grunt.registerTask('default', [
     'jshint',
     'jscs',
+    'mocha_istanbul:coverage',
     'watch'
   ]);
 };
