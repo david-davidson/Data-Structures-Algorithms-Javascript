@@ -33,9 +33,9 @@ describe('The self-enforcing constructor', function() {
 	});
 
 	it('Maintains access to the prototype', function() {
-		SelfEnforcingConstructor.prototype.newAttr = 'new';
 		myInstance = new SelfEnforcingConstructor();
 		secondInstance = SelfEnforcingConstructor(); // jshint ignore:line
+		SelfEnforcingConstructor.prototype.newAttr = 'new';
 
 		expect(myInstance.newAttr).to.eql('new');
 		expect(secondInstance.newAttr).to.eql('new');
