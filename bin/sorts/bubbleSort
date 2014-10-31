@@ -6,6 +6,6 @@ var validNumbers = require('../../lib/utilities/validNumbers'),
 	bubbleSort = require('../../lib/sorts/bubbleSort');
 
 // Sanitize input
-if (validNumbers()) {
+if (validNumbers(process.argv)) {
 	console.log(bubbleSort(process.argv));
 }

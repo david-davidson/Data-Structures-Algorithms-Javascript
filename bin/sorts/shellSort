@@ -6,6 +6,6 @@ var validNumbers = require('../../lib/utilities/validNumbers'),
 	shellSort = require('../../lib/sorts/shellSort');
 
 // Sanitize input
-if (validNumbers()) {
+if (validNumbers(process.argv)) {
 	console.log(shellSort(process.argv));
 }
