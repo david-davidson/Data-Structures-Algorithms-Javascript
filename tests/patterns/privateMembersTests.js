@@ -2,6 +2,7 @@
 
 var privateMembers = require('../../lib/patterns/privateMembers'),
 	hasSecrets = privateMembers.hasSecrets,
+	Mammal = privateMembers.Mammal,
 	checkGlobalScope = privateMembers.checkGlobalScope,
 	expect = require('chai').expect;
 
@@ -17,6 +18,12 @@ describe('Private properties and methods', function() {
 	it('Allow privileged write access to private properties', function() {
 		hasSecrets.updatePrimitive('something new');
 		expect(hasSecrets.seePrimitive()).to.eql('something new');
+	});
+
+	it('Can be added directly to a prototype', function() {
+		var cat = new Mammal('cat');
+		expect(cat.getKingdom()).to.eql('animal'); // Method defined on the proto
+		expect(typeof cat.kingdom).to.eql('undefined');
 	});
 
 	describe('Vulnerability: returning private objects directly (by reference)', function() {
