@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var validNumbers = require('../../lib/utilities/validNumbers'),
+	mergeSort = require('../../lib/sorts/topDownMergeSort');
+
+// Sanitize input
+if (validNumbers(process.argv)) {
+	console.log(mergeSort(process.argv));
+}
