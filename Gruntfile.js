@@ -17,6 +17,7 @@ module.exports = function(grunt) {
         'bin/sorts/insertionSort',
         'bin/sorts/selectionSort',
         'bin/sorts/shellSort',
+        'bin/sorts/topDownMergeSort',
         'Gruntfile.js'
       ],
       options: {
