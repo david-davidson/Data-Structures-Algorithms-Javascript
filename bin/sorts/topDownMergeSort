@@ -3,9 +3,9 @@
 'use strict';
 
 var validNumbers = require('../../lib/utilities/validNumbers'),
-	mergeSort = require('../../lib/sorts/topDownMergeSort');
+	mergeSort = require('../../lib/sorts/topDownMergeSort'),
+	input = validNumbers(process.argv);
 
-// Sanitize input
-if (validNumbers(process.argv)) {
-	console.log(mergeSort(process.argv));
+if (input) {
+	console.log(mergeSort(input));
 }

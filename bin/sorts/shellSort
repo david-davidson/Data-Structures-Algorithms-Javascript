@@ -3,9 +3,9 @@
 'use strict';
 
 var validNumbers = require('../../lib/utilities/validNumbers'),
-	shellSort = require('../../lib/sorts/shellSort');
+	shellSort = require('../../lib/sorts/shellSort'),
+	input = validNumbers(process.argv);
 
-// Sanitize input
-if (validNumbers(process.argv)) {
-	console.log(shellSort(process.argv));
+if (input) {
+	console.log(shellSort(input));
 }

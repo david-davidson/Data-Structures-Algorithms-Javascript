@@ -3,9 +3,9 @@
 'use strict';
 
 var validNumbers = require('../../lib/utilities/validNumbers'),
-	bubbleSort = require('../../lib/sorts/bubbleSort');
+	bubbleSort = require('../../lib/sorts/bubbleSort'),
+	input = validNumbers(process.argv);
 
-// Sanitize input
-if (validNumbers(process.argv)) {
-	console.log(bubbleSort(process.argv));
+if (input) {
+	console.log(bubbleSort(input));
 }
