@@ -9,8 +9,7 @@ var validNumbers = require('../../lib/utilities/validNumbers'),
 describe('Utilities: `validNumbers`', function() {
 
 	it('Removes non-numbers from an array', function() {
-		expect(validNumbers(partialNumsArray)).to.eql(true);
-		expect(partialNumsArray).to.eql([ 1, 2, 3 ]);
+		expect(validNumbers(partialNumsArray)).to.eql([ 1, 2, 3 ]);
 	});
 
 	it('Returns false when the array contains no numbers', function() {
