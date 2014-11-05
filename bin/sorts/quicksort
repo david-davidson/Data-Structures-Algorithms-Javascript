@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var validNumbers = require('../../lib/utilities/validNumbers'),
+	quicksort = require('../../lib/sorts/quicksort'),
+	input = validNumbers(process.argv);
+
+if (input) {
+	console.log(quicksort(input));
+}
