@@ -12,7 +12,7 @@ describe('Private properties and methods', function() {
 	});
 
 	it('Allow privileged read access to private properties', function() {
-		expect(hasSecrets.seePrimitive()).to.eql('a string');
+		expect(hasSecrets.seePrimitive()).to.eql('Esse est percipi');
 	});
 
 	it('Allow privileged write access to private properties', function() {
